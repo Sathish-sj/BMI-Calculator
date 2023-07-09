@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalc-Know your BMI</title>
+    <link rel="stylesheet" href="calc_style.css">
+</head>
+<body>
+    <nav>
+        <h1 class="nav-title">SmartCalc</h1>
+        <ul>
+            
+          <li class="n-link"><a class="navlink" href="index.html" id="calc-link">Calculator</a></li>
+          <li class="n-link"><a class="navlink" href="bmi.html" id="bmi-link">Know your BMI</a></li>
+          <li class="n-link"><a class="navlink" href="age_calc.html" id="age-link">Age Calculator</a></li>
+          <li><a class="navlink" href="about.html" id="about-link">About</a></li>
+        </ul>
+      </nav>
+    
+    <div class="container bmi_container">
+        <div class="bmi_form">
+            <h1 class="Bmi_heading">BMI Calculator</h1>
+            <div class="age_div">
+                <label class="bmi_age" for="">Age</label>
+                <br>
+                <input class="input_bmi" id="age" type="number">
+            </div>
+            
+            <div class="gender_div">
+                <input class="bmi_radio" id="gender"  type="radio" name="gender">
+                <label class="label-male"  for="">Male</label>
+                <input class="bmi_radio" id="gender" type="radio" name="gender">
+                <label  for="">Female</label>
+            </div>
+
+            <div class="h_div">
+                <label for="">Height(cm)</label>
+                <br>
+                <input class="input_bmi" id="height" type="number">
+            </div>
+
+            <div class="w_div">
+                <label for="">Weight(kg)</label>
+                <br>
+                <input class="input_bmi" id="weight" type="number">
+            </div>
+            <br>
+
+            
+
+            <button class="bmi_calc_button" onclick="calc()">Calculate BMI</button>
+            <div id="result">
+                <br>
+                <h2 id="bmi_result"></h2>
+                <br>
+                <h3 id="bmi_comment"></h3>
+            </div>
+        </div>  
+    </div>
+
+     <!-- ------------------- Popup Modal ---------------------------------------------------- -->
+
+     <div  id="Mymodal" class="modal">
+        <div id="popup-animation" class="modal-content bmi-modal-content">
+            <span title="close" class="close">&times;</span>
+            <h3 style="color: red;" id="bmi-popup-text" class="Popup-text">All fields are manditory</h3>
+            <p class="bmi-popup-p-tag" >Try again by filling all the fields and then Calculate </p>
+            <br>
+        </div>
+    </div>
+    
+<script src="bmi_calc.js"></script>
+
+</body>
+</html>
